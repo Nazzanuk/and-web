@@ -48,3 +48,15 @@ Message: file_get_contents(http://localhost:8001/wp-content/themes/andigital/dat
 File:    /Projects/local-wp/wp-content/themes/andigital/who-we-are.php
 Line:    9
 -------------------------------------------- 
+[Mar 19 2015 16:09:39] ERROR_HANDLER 
+Number:  2
+Message: file_get_contents(http://localhost:8001/wp-content/themes/andigital/data/advisors/advisors.json): failed to open stream: HTTP request failed! 
+File:    /Projects/local-wp/wp-content/themes/andigital/who-we-are.php
+Line:    13
+-------------------------------------------- 
+[Mar 19 2015 16:15:11] ERROR_HANDLER 
+Number:  2
+Message: file_get_contents(http://localhost:8001/wp-content/themes/andigital/data/employees/employees.json): failed to open stream: HTTP request failed! 
+File:    /Projects/local-wp/wp-content/themes/andigital/who-we-are.php
+Line:    9
+-------------------------------------------- 
