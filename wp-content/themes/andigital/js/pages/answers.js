@@ -1,0 +1,1 @@
+Feature.defaultImageHeight=1200,Feature.heightPercentage=.85,Feature.scaleToFit=!1,$(function(){$(".delete-answer-button").each(function(a,b){$(b).click(function(){return confirm("Confirm delete?")?!0:!1})})});

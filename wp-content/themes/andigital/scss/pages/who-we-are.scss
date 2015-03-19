@@ -1,0 +1,453 @@
+$red : #d93621;
+$black : #1b1e24;
+$grey : #8a8e99;
+
+.who-we-are{
+	#feature{
+		h1{
+			position: absolute;
+		}
+	}
+
+	.text-1 p{
+		text-align: center;
+		width: 90%;
+		max-width: 900px;
+		margin: auto;
+	}
+
+	#values{
+		margin: auto;
+		max-width: 1500px;
+		margin-bottom: 100px;
+
+		h3{
+			margin-top: 20px;
+		}
+
+		.icon{
+			display:inline-block;
+			width:120px;
+			margin-top:50px;
+
+			img{
+				width: 100%;
+			}
+		}
+		
+		p {
+			width: 92%;
+			margin: auto;
+		}
+        
+        
+	}
+
+	@media (max-width: 700px){
+		#values{
+			margin-bottom: 50px;
+
+			.underline-2{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	/*----------------------------------------------------------------------------------------------------
+	employees
+	----------------------------------------------------------------------------------------------------*/
+	#employees h2{
+		margin-bottom: 100px;
+	}
+
+	#employee-list{
+		margin: auto;
+		margin-bottom: 100px;
+	}
+
+	.employee{
+		position: relative;
+		float: left;
+		width: 20%;
+		cursor: pointer;
+		outline: 5px solid #ffffff;
+
+		img{
+			width: 100%;
+		}
+
+		.image-2{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+
+			img{
+				width: 100%;
+			}
+		}
+
+		.info-box{
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #ffffff;
+		}
+
+		.info-outer{
+			display: table;
+			width: 100%;
+			height: 100%;
+
+		}
+
+		.info-inner{
+			display: table-cell;
+			padding: 10px;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.info{
+			display: inline-block;
+
+			h3{
+				margin-top: 0;
+			}
+		}
+
+		.last-border{
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 5px;
+			height: 100%;
+			background-color: #ffffff;
+		}
+	}
+
+	.blank-3{
+		display: none;
+		cursor: default;
+		img{
+			opacity: 0;
+		}
+	}
+	
+	/*----------------------------------------------------------------------------------------------------
+	advisors
+	----------------------------------------------------------------------------------------------------*/
+	#advisors h2{
+		margin-bottom: 100px;
+	}
+
+	#advisor-list{
+		margin: auto;
+		margin-bottom: 100px;
+	}
+
+	.advisor{
+		position: relative;
+		float: left;
+		width: 25%;
+		cursor: pointer;
+		outline: 5px solid #ffffff;
+
+		img{
+			width: 100%;
+		}
+
+		.image-2{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+
+			img{
+				width: 100%;
+			}
+		}
+
+		.info-box{
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #ffffff;
+		}
+
+		.info-outer{
+			display: table;
+			width: 100%;
+			height: 100%;
+
+		}
+
+		.info-inner{
+			display: table-cell;
+			padding: 10px;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.info{
+			display: inline-block;
+
+			h3{
+				margin-top: 0;
+			}
+		}
+
+		.last-border{
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 5px;
+			height: 100%;
+			background-color: #ffffff;
+		}
+	}
+
+	#employee-bio{
+		position: relative;
+		float: left;
+		width: 100%;
+		height: 800px;
+		max-height: 800px;
+		background-color: #f0f0f0;
+		margin-bottom: 5px;
+		overflow: hidden;
+		-webkit-transition: height 0.5s;
+		-moz-transition: height 0.5s;
+		-o-transition: height 0.5s;
+		transition: height 0.5s;
+
+		#employee-bio-photo{
+			position: relative;
+			float: left;
+			width:35%;
+			height: 100%;
+			overflow: hidden;
+
+			#employee-bio-photo-img{
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+			}
+		}
+
+		#employee-bio-details{
+			position: relative;
+			float: left;
+			width: 65%;
+			height: 100%;
+			overflow: auto;
+			text-align: center;
+
+			#employee-bio-title{
+				display: block;
+				font-family: 'nexa_lightregular';
+				color: $black;
+				margin-bottom: 30px;
+			}
+
+			#employee-bio-text{
+				margin: auto;
+				width: 90%;
+				h4{
+					font-size: 16px;
+				}
+			}
+		}
+
+		#employee-bio-close{
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			width: 40px;
+			cursor: pointer;
+
+			img{
+				width: 100%;
+			}
+		}
+	}
+
+	#advisor-bio{
+		position: relative;
+		float: left;
+		width: 100%;
+		height: 800px;
+		max-height: 800px;
+		background-color: #f0f0f0;
+		margin-bottom: 5px;
+		overflow: hidden;
+		-webkit-transition: height 0.5s;
+		-moz-transition: height 0.5s;
+		-o-transition: height 0.5s;
+		transition: height 0.5s;
+
+		#advisor-bio-photo{
+			position: relative;
+			float: left;
+			width:45%;
+			height: 100%;
+			overflow: hidden;
+
+			#advisor-bio-photo-img{
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+			}
+		}
+
+		#advisor-bio-details{
+			position: relative;
+			float: left;
+			width: 55%;
+			height: 100%;
+			overflow: auto;
+			text-align: center;
+
+			#advisor-bio-title{
+				display: block;
+				font-family: 'nexa_lightregular';
+				color: $black;
+				margin-bottom: 30px;
+			}
+
+			#advisor-bio-text{
+				margin: auto;
+				width: 90%;
+				h4{
+					font-size: 16px;
+				}
+			}
+		}
+
+		#advisor-bio-close{
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			width: 40px;
+			cursor: pointer;
+
+			img{
+				width: 100%;
+			}
+		}
+	}
+		
+	@media (max-width: 900px){
+		#employees h2{
+			margin-bottom: 50px;
+		}
+
+		#employee-list{
+			margin-bottom: 50px;
+		}
+
+		.employee{
+			width: 25%;
+
+			img{
+				width: 100%;
+			}
+		}
+
+		#advisors h2{
+			margin-bottom: 50px;
+		}
+
+		#advisor-list{
+			margin-bottom: 50px;
+		}
+
+		.advisor{
+			width: 25%;
+
+			img{
+				width: 100%;
+			}
+		}
+		
+		#employee-bio{
+			height: auto;
+			#employee-bio-photo{
+				float: none;
+				width: 100%;
+				height: 300px;
+
+				#employee-bio-photo-img{
+					width: 100%;
+					height: auto;
+				}
+			}
+
+			#employee-bio-details{
+				float: none;
+				width: 100%;
+				max-height: 400px;
+
+				#employee-bio-text{
+					width: 90%;
+					margin-bottom: 50px;
+				}
+			}
+		}
+		
+		#advisor-bio{
+			height: auto;
+			#advisor-bio-photo{
+				float: none;
+				width: 100%;
+				height: 300px;
+
+				#advisor-bio-photo-img{
+					width: 100%;
+					height: auto;
+				}
+			}
+
+			#advisor-bio-details{
+				float: none;
+				width: 100%;
+				max-height: 400px;
+
+				#advisor-bio-text{
+					width: 90%;
+					margin-bottom: 50px;
+				}
+			}
+		}
+
+		.blank-3{
+			display: none;
+		}
+	}
+	
+	@media (max-width: 500px){
+		.employee{
+			width: 50%;
+
+			img{
+				width: 100%;
+			}
+		}
+
+		.advisor{
+			width: 50%;
+
+			img{
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,50 @@
+[Mar 10 2015 16:17:45] ERROR Exception while exporting: Unable to authenticate your request with secret_key =  
+[Mar 10 2015 16:18:18] ERROR Exception while exporting: Unable to authenticate your request with secret_key =  
+[Mar 10 2015 16:18:22] ERROR Exception while exporting: Unable to authenticate your request with secret_key =  
+[Mar 10 2015 16:18:49] ERROR Exception while exporting: Unable to authenticate your request with secret_key =  
+[Mar 10 2015 16:19:02] ERROR Exception while exporting: Unable to authenticate your request with secret_key =  
+[Mar 10 2015 16:19:44] ERROR Exception while exporting: Unable to authenticate your request with secret_key =  
+[Mar 10 2015 16:20:01] ERROR Exception while exporting: Unable to authenticate your request with secret_key =  
+[Mar 10 2015 16:22:18] ERROR Exception while exporting: Unable to authenticate your request with secret_key =  
+[Mar 10 2015 17:02:55] ERROR_HANDLER 
+Number:  2
+Message: chmod(): No such file or directory
+File:    /Projects/local-wp/wp-content/plugins/duplicator/classes/utility.php
+Line:    193
+-------------------------------------------- 
+[Mar 10 2015 17:04:45] ERROR_HANDLER 
+Number:  2
+Message: mkdir(): File exists
+File:    /Projects/local-wp/wp-admin/includes/class-wp-filesystem-direct.php
+Line:    384
+-------------------------------------------- 
+[Mar 10 2015 17:08:08] ERROR_HANDLER 
+Number:  2
+Message: gzinflate(): data error
+File:    /Projects/local-wp/wp-includes/class-http.php
+Line:    2108
+-------------------------------------------- 
+[Mar 10 2015 17:15:30] ERROR_HANDLER 
+Number:  2
+Message: gzinflate(): data error
+File:    /Projects/local-wp/wp-includes/class-http.php
+Line:    2108
+-------------------------------------------- 
+[Mar 19 2015 16:03:31] ERROR_HANDLER 
+Number:  2
+Message: file_get_contents(http://localhost:8001/wp-content/themes/andigital/data/employees/employees.json): failed to open stream: HTTP request failed! 
+File:    /Projects/local-wp/wp-content/themes/andigital/who-we-are.php
+Line:    9
+-------------------------------------------- 
+[Mar 19 2015 16:05:31] ERROR_HANDLER 
+Number:  2
+Message: file_get_contents(http://localhost:8001/wp-content/themes/andigital/data/advisors/advisors.json): failed to open stream: HTTP request failed! 
+File:    /Projects/local-wp/wp-content/themes/andigital/who-we-are.php
+Line:    13
+-------------------------------------------- 
+[Mar 19 2015 16:07:39] ERROR_HANDLER 
+Number:  2
+Message: file_get_contents(http://localhost:8001/wp-content/themes/andigital/data/employees/employees.json): failed to open stream: HTTP request failed! 
+File:    /Projects/local-wp/wp-content/themes/andigital/who-we-are.php
+Line:    9
+-------------------------------------------- 

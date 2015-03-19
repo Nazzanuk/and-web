@@ -1,0 +1,64 @@
+.answer {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.answer .form {
+  margin-top: 0;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: inline-block;
+  width: 80%;
+  max-width: 800px;
+}
+.answer .form .half {
+  width: 50%;
+}
+.answer .form .full {
+  width: 100%;
+}
+.answer .form input {
+  margin-bottom: 20px;
+}
+.answer .form textarea {
+  margin-bottom: 20px;
+}
+.answer .form label {
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.answer .result {
+  margin-top: 0;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: inline-block;
+  width: 80%;
+  max-width: 800px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  color: white;
+}
+.answer .success {
+	background: green;
+}
+.answer .fail {
+	background: red;
+}
+.answer .links {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: inline-block;
+   width: 100%;
+}
+.answer .links a {
+  display: inline-block;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+.answer .error {
+	color: red;
+}

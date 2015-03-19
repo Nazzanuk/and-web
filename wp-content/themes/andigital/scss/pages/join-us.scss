@@ -1,0 +1,728 @@
+$red : #d93621;
+$black : #1b1e24;
+$grey : #8a8e99;
+$lineGrey : #e5e5e5;
+$lightRed : #f23c24;
+$Gray98 : #fafafa;
+
+@media (max-width: 750px) {
+	hr {
+	   	display: block;
+	   	margin-top: 25px;
+	}
+}
+
+//----------------------------------------------------------------------------------------------------
+//Our Process
+//----------------------------------------------------------------------------------------------------
+           
+#charter-rows{
+    width: 100%;
+ 	margin: auto;    
+    text-align: center;
+    position: relative;
+    background-color: $Gray98;
+    
+   	hr {
+   		display: none;
+   	}    
+
+	a {
+		cursor: text;
+	}
+    
+    h2 {
+        position: relative;
+        display: inline-block;
+    }    
+    
+    .charter-images {
+        width: 100%; 
+        height: 100%; 
+        position: absolute; 
+        left: 0; 
+        top: 0;
+        overflow: hidden;
+
+        .charter-background-image-1 {
+            /* width: 1024px; */
+            height: 800px;
+            width: auto;
+            position: absolute;
+            right:  0;
+            top: 0;
+        } 
+        
+        .charter-background-image-2 {
+           /* width: 1024px;*/
+            height: 800px;
+            width: auto;
+            position: absolute;
+            left:  0;
+            bottom: 0;
+        }         
+    }
+    
+    .charter-row {
+        width: 90%;
+        position: relative;  
+        display: table;
+        margin: 0 auto;
+
+        .charter-img, .charter-text {
+            margin: auto;
+            text-align: center;
+        }      
+
+        .charter-img {
+            width: 30%;
+            padding: 80px 0 50px 0;
+            float: left;
+
+            img {
+                width: 35%;
+                display: table-cell;
+                margin: auto;
+                vertical-align: middle;
+            }        
+        } 
+
+        .charter-container {
+            width: 70%;
+            display: inline-block;
+            position: relative;
+            float: right;
+             
+            .charter-icon {
+                display: none;
+            }
+
+            .charter-title {
+                width: 100%;
+                position: relative;
+                display: inline-block;
+                h4 {
+                    text-align: left;
+                }
+            }               
+        }               
+
+       .charter-text {
+           width: 70%;
+           line-height: 37px;
+           display: inline-block;
+           overflow: hidden;
+           text-align: left;
+           float: right;
+
+           .charter-paragraph {
+               width: 90%;
+               padding: 0; 
+	           display: inline-block;
+	         }
+       } 
+    }
+    
+    @media (max-width: 750px) {
+        width: 100%;
+       
+       
+        hr {
+           display: block;
+           margin-top: 25px;
+           margin-bottom: 25px;
+        }
+        
+        .charter-background-image-1 {
+            display:none;
+        }    
+    
+        .charter-background-image-2 {
+            display:none;
+        }    
+        
+        .charter-row {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+    		text-align: center;
+            float: none;		
+
+			a {
+				cursor: pointer;
+			}
+			
+            .charter-container {
+                 display: inline-block;
+                 vertical-align: top;
+                 position: relative;
+                 width: 70%;
+                 float: none;
+                 
+                .charter-title {
+                    display: inline-table;
+                    padding-top: 7px;
+                	width: 100%;
+		            max-width: 70%;
+            		text-align: center;
+                    display: inline-block;
+                    float: none;
+                    h4 {
+		                 font-size: 18px;
+        	             	margin: 0;
+	                     text-align: center;
+                     }
+                }               
+
+                 .charter-icon {
+  		            display: inline-block;
+                    float: right;
+                    width: 40px;
+                    height: 40px;
+                 }
+            }               
+            
+             .charter-img {
+                 vertical-align: top;
+                 width: 40px;
+                 padding: 0;
+                 text-align: left;
+                 display: inline-block;
+                 float: none;
+                 img {
+                    width: 40px;
+                    height: 40px;
+                 }
+             }
+        
+            .charter-text {
+                padding: 0;
+                width: 90%;
+                overflow: hidden;
+                text-align: center;
+                float: none;
+                display: block;
+                 
+                 .charter-paragraph {
+                 	padding: 30px 0 30px 0;
+                 }
+            }               
+        }
+
+        .expand-icon {
+			display: inline-block;
+			width: 100%;
+         }
+		
+        .collapse-icon {
+			display: none;
+			width: 100%;
+         }
+		
+        .expanded .collapse-icon {
+			display: inline-block;
+         }
+		
+        .expanded .expand-icon {
+			display: none;
+         }
+		
+		.expanded .charter-text {
+			display: block;
+		}
+    }        
+}
+
+//----------------------------------------------------------------------------------------------------
+//Benefits
+//----------------------------------------------------------------------------------------------------
+
+#benefit-columns { 
+	width:100%;
+ 	margin: auto;    
+ 	text-align: center; 
+    position: relative;
+    background-color: $Gray98;
+    
+    hr {
+   		display: none;
+    }
+    
+    h2 {
+        position: relative;
+        display: inline-block;
+    }
+    
+
+    
+    .benefit-images {
+        width: 100%; 
+        height: 100%; 
+        position: absolute; 
+        left: 0; 
+        top: 0;
+        background-color: #f6f6f6;
+        
+        .image-container-1 {
+            width: 50%; 
+            height: 800px;
+            overflow:hidden; 
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 0;        
+
+            .benefit-background-image-1 {
+                height: 800px;
+                position: absolute;
+                right:  0;
+                top: 0;
+            } 
+        
+        }
+        
+        .image-container-2 {
+            width: 50%; 
+            height: 800px;
+            overflow:hidden; 
+            display: inline-block;
+            position: absolute;
+            left:  0;
+            bottom: 0; 
+            
+            .benefit-background-image-2 {
+                height: 800px;
+                position: absolute;
+                left:  0;
+                bottom: 0;
+            } 
+        }
+    } 
+    
+     @media (max-width: 750px) {
+            
+         .benefit-images {
+            
+             .benefit-background-image-1 {
+                display: none;
+             } 
+
+             .benefit-background-image-2 {
+                display: none;
+             }      
+         }
+     }
+    
+    .benefit-row {    
+
+        hr {
+            display: none;
+        }
+
+        a {
+            cursor: text;
+        }
+    
+        width: 100%;
+        position: relative;
+        display: inline-block;
+    
+        .benefit-column {
+            width: 40%;
+            position: relative;  
+            display: inline-block;
+            margin: 0 auto;
+
+            .benefit-img, .benefit-text {
+                margin: auto;
+                text-align: center;
+            }      
+
+            .benefit-img {
+                width: 30%;
+                padding: 60px 0 60px 0; 
+                float: left;
+                img {
+                    width: 70%;
+                    display: table-cell;
+                    margin: auto;
+                    vertical-align: middle;
+                }        
+            } 
+
+            .benefit-container {
+                width: 70%;
+                display: inline-block;
+                position: relative;
+                float: right;
+                
+                .benefit-icon {
+                    display: none;
+                 }
+
+                .benefit-title {
+                     width: 100%;
+                     h4 {
+                        text-align: left;
+                     }
+                }               
+            }               
+
+           .benefit-text {
+                width: 70%;
+                line-height: 37px;
+                display: inline-block;
+                overflow: hidden;
+                text-align: left;
+                float: right;
+               .benefit-paragraph {
+                    width: 90%;
+                    padding: 0; 
+                    display: inline-block;
+                 }
+           }
+        }
+        
+        @media (max-width: 750px) {
+            width: 100%;
+                hr {
+                    display: block;
+                    margin-top: 25px;
+                    margin-bottom: 25px;
+                }            
+
+                .benefit-column {
+                    float: none;
+                    width: 100%;
+                    a {
+                        cursor: pointer;
+                    }
+                    
+                    .benefit-img {
+                         vertical-align: top;
+                        width: 40px;
+                        padding: 0;
+                        text-align: left;
+                        display: inline-block;
+                        float: none;
+                        img {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    } 
+
+                    .benefit-text {
+                        padding: 0;
+                        width: 90%;
+                        overflow: hidden;
+                        text-align: center;
+                        float: none;
+                        display: block;
+
+                        .charter-paragraph {
+                            padding: 30px 0 30px 0;
+                        }
+                    }      
+
+
+                    .benefit-container {
+                        display: inline-block;
+                        vertical-align: top;
+                        position: relative;
+                        width: 70%;
+                        float: none;
+
+                        .benefit-title {
+                            display: inline-table;
+                            padding-top: 7px;
+                            width: 100%;
+                            max-width: 70%;
+                            text-align: center;
+                            display: inline-block;
+                            float: none;
+                            h4 {
+                                font-size: 18px;
+                                margin: 0;
+                                text-align: center;
+                             }
+                        }               
+
+                         .benefit-icon {
+                            display: inline-block;
+                            float: right;
+                            width: 40px;
+                            height: 40px;
+                         }
+                    }                
+
+                }
+            
+                .expand-icon {
+                    display: inline-block;
+                    width: 100%;
+                 }
+
+                .collapse-icon {
+                    display: none;
+                    width: 100%;
+                 }
+
+                .expanded .collapse-icon {
+                    display: inline-block;
+                 }
+
+                .expanded .expand-icon {
+                    display: none;
+                 }
+
+                .expanded .benefit-text {
+                    display: block;
+                }
+        }        
+    }
+}
+
+
+ //----------------------------------------------------------------------------------------------------
+//Academy Introduction
+//----------------------------------------------------------------------------------------------------   
+      
+.text-1 {
+    position: relative;
+	width: 100%;
+	text-align: center;
+	background-color: $Gray98;
+    height: 580px;
+    overflow: hidden;    
+    
+	.paragraph {
+        position: absolute;
+        display: inline-block;
+		width: 90%;
+		max-width: 800px;
+        
+        p {
+            text-align: left;
+        }        
+	}
+    
+    .background-image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1680px;
+    }
+    
+    @media (max-width: 850px){
+            padding-bottom: 30px;
+            height: auto; 
+        
+            .paragraph{
+                position: relative;
+            }
+    } 
+    
+    @media (max-width: 700px){
+
+            .background-image{
+                display: none;
+            }
+    }    
+}
+
+#join-us-columns {
+	width:100%; 
+ 	margin: auto;
+ 	padding-bottom: 80px;
+    text-align: center;
+    position: relative;
+    background-color: $Gray98;
+    
+    h2 {
+        position: relative;
+        display: inline-block;
+
+        .underline{
+            margin-bottom: 0;
+        }
+    }      
+    
+    .join-images {
+        width: 100%; 
+        height: 100%; 
+        position: absolute; 
+        left: 0; 
+        top: 0;
+        overflow: hidden;
+        
+        .join-background-image-1 {
+            height: 800px;
+            position: absolute;
+            display: block;
+            left:  0;
+            bottom: 0;
+        } 
+        
+        .join-background-image-2 {
+            height: 800px;
+            position: absolute;
+            display: block;
+			right: 0;
+			top: 0;
+        }         
+    }    
+
+    .join-tabs-wrapper{
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        position: relative; 
+        border-bottom: 0;
+        margin-bottom: 23px;
+
+        .join-tabs {
+            position: relative;
+            display: inline-block;
+		    margin-top: 23px;
+            
+            
+            .graduatetab {
+                color: grey;
+                text-decoration: none;
+                padding: 10px;
+                padding-left: 25px; 
+                padding-right: 25px;
+                font-size: 1em;
+                cursor: pointer;
+                display: inline-block;
+            }
+            
+            .experiencedtab {
+                color: grey;
+                text-decoration: none;
+                padding: 10px;
+                padding-left: 25px;
+                padding-right: 25px;
+                font-size: 1em;
+                cursor: pointer;
+                display: inline-block;
+            }
+  
+            .divider{
+                display: inline-block;
+                position: absolute;
+                top: 7px;
+                width: 1px;
+                height: 27px;
+                background-color: $lineGrey;
+            }           
+            
+        }
+         
+    }
+    
+    .join-us-column1 { 
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        display: none;
+        height: 700px;
+        position: relative;    
+        
+    } 
+    
+    .join-us-column2 {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        display: none;
+        height: 700px;
+        position: relative; 
+        
+    }        
+         
+ 	.join-us-text{
+        position: relative;
+        display: inline-block;
+        text-align: left;
+        width: 50%;
+        /*max-width: 550px;*/
+        margin: auto;
+	} 
+    
+    .button{
+        display: inline-block;
+        margin-top: 40px;
+    } 
+    
+	@media (max-width: 750px) {
+        
+        .join-us-column1 { 
+            height: auto;
+        } 
+        
+        .join-us-column2 { 
+            height: auto;
+        }        
+        
+        .join-us-text{
+            width: 90%;
+         }          
+	}
+
+}
+
+#join-us-columns .visible {
+    display: inline-block; 
+    
+    @media (max-width: 750px) {
+        height: auto;
+    }
+}
+
+#join-us-columns {
+    
+    .join-images {
+        .show {
+                display: block; 
+        }
+
+        .hide {
+                display: none; 
+        }
+    }
+    
+    @media (max-width: 750px) {
+        .join-images {
+
+            .join-background-image-1 {
+                display: none;
+            } 
+
+            .join-background-image-2 {
+                display: none;
+            }
+            
+            .show {
+                display: none;
+            }
+        }         
+    }
+    
+    .join-tabs-wrapper {
+        
+        .join-tabs {
+            .selected{
+                color: $red;
+            }
+            
+            .selected{
+                color: $red;
+            }             
+        }
+        
+    }
+}
+
+      
+

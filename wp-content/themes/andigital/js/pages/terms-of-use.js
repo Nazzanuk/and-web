@@ -1,0 +1,1 @@
+var Page={};Page.init=function(){$("p").wrapAll('<div class="terms-text"/>')},$(function(){Page.init()});

@@ -1,0 +1,1 @@
+<? if (is_active_sidebar('header-content')) dynamic_sidebar('header-content'); ?>

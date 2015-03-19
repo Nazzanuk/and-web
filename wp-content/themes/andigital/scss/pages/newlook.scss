@@ -1,0 +1,51 @@
+#casestudy{
+	margin: auto;
+	margin-bottom: 100px;
+
+	h3{
+		margin-top: 20px;
+	}
+
+	.images{
+		display:inline-block;
+		text-align: center;
+		margin: 0 auto;
+		
+		img{
+			width: 22%;
+		}
+
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+		
+	.column {
+		width: 100%;
+		margin-bottom: 50px;
+	}
+	
+	p {
+		width: 80%;
+		margin: auto;
+	}
+}
+
+@media (max-width: 700px){
+	#casestudy{
+		margin-bottom: 50px;
+
+		.underline-2{
+			margin-bottom: 0;
+		}
+
+		.images{
+			img{
+				width: 49%;
+			}
+		}
+	
+		p {
+			width: 92%;
+		}
+	}
+}

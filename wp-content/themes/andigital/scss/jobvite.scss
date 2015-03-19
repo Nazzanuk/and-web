@@ -1,0 +1,36 @@
+$red : #d93621;
+$black : #1b1e24;
+$grey : #8a8e99;
+$lineGrey : #e5e5e5;
+
+/*----------------------------------------------------------------------------------------------------
+jobvite
+----------------------------------------------------------------------------------------------------*/
+html, body{
+	width: 100%;
+	background-color: #f9f9f9;
+}
+
+.jvcontainer{
+	width: 85%;
+	max-width: 1100px;
+	background-color: #f9f9f9;
+}
+
+.jvheader{
+	display: none;
+}
+
+.backlink{
+	display: none;
+}
+
+.jvapply input{
+	border: 1px solid #cccccc;
+}
+
+.jvapply textarea{
+	width: 100%;
+	border: 1px solid #cccccc;
+	resize: none;
+}

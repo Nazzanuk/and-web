@@ -1,0 +1,1 @@
+var Page={};Page.init=function(){$("p").wrapAll('<div class="privacy-text"/>')},$(function(){Page.init()});
