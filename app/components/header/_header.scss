@@ -1,0 +1,41 @@
+[data-component="header"] {
+  #header {
+    position: fixed;
+    background-color: $glass;
+    height: 70px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: none;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+
+    .logo {
+      margin-top: 20px;
+      height: 40px;
+      position: absolute;
+    }
+
+    .menu-button {
+      position: absolute;
+      right: 0;
+      color: $primary;
+      font-size: 30px;
+      padding: 15px;
+      line-height: 40px;
+      cursor: pointer;
+    }
+  }
+
+  #header-transparent {
+    @extend #header;
+    top: 0;
+    background: none;
+    display: block;
+    box-shadow: none;
+
+    .menu-button {
+      color: white;
+    }
+  }
+
+}

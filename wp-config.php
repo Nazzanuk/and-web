@@ -71,8 +71,10 @@ $table_prefix  = 'wp_';
 define('WP_DEBUG', false);
 define('RELOCATE',true);
 
-define('WP_HOME','http://localhost:8001');
-define('WP_SITEURL','http://localhost:8001');
+
+define('WP_HOME','http://localhost:8888');
+define('WP_SITEURL','http://localhost:8888');
+
 
 /* That's all, stop editing! Happy blogging. */
 

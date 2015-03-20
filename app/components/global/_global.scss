@@ -1,0 +1,205 @@
+body {
+//  background: #eee;
+  color: #8a8e99;
+
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 19px;
+  overflow-x: hidden;
+}
+
+.container-fluid, .container {
+  position: relative;
+}
+
+
+a {
+  color: $primary;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    color: lighten($primary, 10%);
+  }
+}
+.and-button {
+  line-height: 35px;
+  padding: 0 30px;
+  color: white;
+  background: $primary;
+  border-radius: 3px;
+  font-size: 20px;
+  display: inline-block;
+
+  &:hover {
+    background: lighten($primary, 10%);
+    color: white;
+  }
+}
+
+h1, h2, h3, p{
+  margin: 0 0 10px;
+}
+
+p {
+  line-height: 35px;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-family: 'nexa_lightregular', Helvetica, sans-serif;
+  text-align: center;
+  color: black;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+
+  &:after {
+    content:"";
+    margin: auto;
+    display: block;
+    width: 40px;
+    background: $primary;
+    height: 3px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+}
+
+.subtitle {
+  font-family: 'nexa_lightregular', Helvetica, sans-serif;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.hero {
+  height:800px;
+//  background-image: url('img/Home-3.jpg');
+  background-size: cover;
+  background-position: left top;
+
+  .feature {
+    color: white;
+    font-size: 30px;
+    margin-top: 350px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-family: 'nexa_lightregular', Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    padding-top: 350px;
+
+    &:after {
+      content:"";
+      margin: auto;
+      display: block;
+      width: 70px;
+      background: $primary;
+      height: 5px;
+      margin-top: 10px;
+    }
+  }
+}
+
+.sub-pages {
+  height: 70px;
+  line-height: 70px;
+  background: $lightGrey;
+  text-align: center;
+
+  .sub-page {
+    display: inline-block;
+    color: #8a8e99;
+    padding: 0 30px;
+    cursor: pointer;
+
+    &:hover, &.active {
+      color: $primary;
+    }
+  }
+}
+
+.quote {
+  min-height: 350px;
+  padding: 50px 30px;
+  background-size: cover;
+  background-position: right;
+  background-color: white;
+  text-align: center;
+
+  .quote-center-text {
+    max-width: 850px;
+    margin: auto;
+  }
+
+  .quote-left-text {
+    text-align: left;
+    max-width: 850px;
+    margin: auto;
+  }
+
+  .quote-text {
+    margin-top: 60px;
+    padding: 50px;
+  }
+
+  .quote-benefit {
+    text-align: left;
+    img {
+      float: left;
+      width: 120px;
+    }
+
+    p, h3 {
+      padding-left: 160px;
+    }
+
+    p {
+      margin-bottom: 80px;
+    }
+  }
+
+  .quote-benefit-alt {
+    @extend .quote-benefit;
+    padding: 0 50px;
+    margin: auto;
+
+    img {
+      width: 140px;
+      margin-bottom: 100px;
+    }
+
+    p, h3 {
+      padding-left: 190px;
+    }
+  }
+}
+
+.features {
+  .feature {
+    text-align: center;
+    padding-bottom: 30px;
+    margin: 0 1px;
+    img {
+      width: 100%;
+      margin-bottom: 40px;
+
+      &.slim {
+        height: 400px;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.sub-pages {
+
+}

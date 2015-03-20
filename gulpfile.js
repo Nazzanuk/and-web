@@ -2,55 +2,118 @@
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
     sass = require('gulp-sass'),
-    connect = require('gulp-connect-php');
+    connect = require('gulp-connect-php'),
+    insert = require('gulp-insert'),
+    replace = require('gulp-replace'),
+    clean = require('gulp-clean')
+    ;
 
 var dir = {
-    theme: "wp-content/themes/andigital/"
+    theme: "wp-content/themes/andigital-new/"
 };
 
 // Default task
-gulp.task('default', [], function () {
+gulp.task('default', ['clean'], function () {
     gulp.start([
         'gen-html',
         'gen-css',
-        'gen-img'
+        'gen-img',
+        'gen-fonts',
+        'gen-js',
+        'gen-theme'
     ]);
 });
 
-gulp.task('connect', function() {
-    connect.server({
-        port:8001
-    });
+gulp.task('clean', function () {
+    return gulp.src(dir.theme, {read: false})
+        .pipe(clean());
 });
 
 gulp.task('gen-css', function () {
-    return gulp.src([
-        dir.theme + 'scss/**/*.scss'
+    gulp.src([
+        'app/bower-components/bootstrap/dist/css/bootstrap.min.css',
+        'app/custom-components/owl-carousel/assets/owl.carousel.css',
+        'app/custom-components/owl-carousel/assets/owl.carousel.theme.css'
+    ])
+        .pipe(concat('bower.css'))
+        .pipe(gulp.dest(dir.theme + '/css'));
+
+    gulp.src([
+        'app/app.scss'
     ])
         .pipe(sass())
-        //.pipe(concat('andigital.css'))
-        .pipe(gulp.dest(dir.theme + 'css/'));
+        .pipe(concat('style.css'))
+        .pipe(gulp.dest(dir.theme));
+
+    return true;
 });
 
 gulp.task('gen-html', function () {
-    return gulp.src([
-        'src/components/header/header.html',
-        'src/components/breadcrumb/breadcrumb.html',
-        'src/components/hero/hero.html',
-        'src/components/content/content.html',
-        'src/components/footer/footer.html'
-    ])
-        .pipe(concat('index.html'))
-        .pipe(gulp.dest('release/'));
+
+    var pages = [
+        'home',
+        'what-we-do',
+        'join-us'
+    ];
+
+    for (var i in pages) {
+        var page = pages[i];
+        var title = capitalizeEachWord(page.replace(/-/g, " "));
+
+        gulp.src([
+            'app/components/head/head.html',
+            'app/components/header/header.html',
+            'app/components/' + page + '/' + page + '.html',
+            'app/components/footer/footer.html'
+        ])
+            .pipe(concat(page + '.php'))
+            .pipe(insert.prepend("<?php /* Template Name: " + title + " */ ?>"))
+            .pipe(gulp.dest(dir.theme + '/templates'));
+    }
 });
 
+gulp.task('gen-js', function () {
+    gulp.src([
+        'app/bower-components/jquery/dist/jquery.min.js',
+        'app/bower-components/underscore/underscore-min.js',
+        'app/bower-components/velocity/velocity.min.js',
+        'app/bower-components/velocity/velocity.ui.js',
+        'app/custom-components/owl-carousel/owl.carousel.min.js',
+        'app/bower-components/angular/angular.min.js'
+    ])
+        .pipe(concat('bower.js'))
+        .pipe(gulp.dest(dir.theme + '/js'));
+
+    return gulp.src(['app/app.js', 'app/components/**/*.js'])
+        .pipe(concat('app.js'))
+        .pipe(gulp.dest(dir.theme + '/js'));
+});
 
 gulp.task('gen-img', function () {
-    return gulp.src(['src/img/**.*'])
-        .pipe(gulp.dest('release/img'));
+    return gulp.src(['app/img/**/*.*'])
+        .pipe(gulp.dest(dir.theme + '/img'));
 });
 
-gulp.task('watch', function () {
-    gulp.watch('src/**/*.scss', ['default']);
-    gulp.watch('src/**/*.html', ['default']);
+gulp.task('gen-fonts', function () {
+    return gulp.src(['app/fonts/**/*.*'])
+        .pipe(gulp.dest(dir.theme + '/fonts'));
 });
+
+gulp.task('gen-theme', function () {
+    return gulp.src(['app/theme/**/*.*'])
+        .pipe(gulp.dest(dir.theme));
+});
+
+gulp.task('watch', ['default'], function () {
+    gulp.watch([
+        'app/components/**/*.*',
+        'app/theme/**/*.*',
+        'app/*.*'
+    ], ['default']);
+});
+
+function capitalizeEachWord(str) {
+    return str.replace(/\w\S*/g, function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+}

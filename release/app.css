@@ -1,0 +1,237 @@
+/*
+Theme Name: ANDigital 2.0
+Theme URI: http://andigital.com
+Author: ANDigital Ltd.
+Author URI: http://andigital.com
+Description: Theme for the new website
+Version: 2.0
+License:
+License URI:
+*/
+body {
+  color: #8a8e99;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 19px;
+  overflow-x: hidden; }
+
+.container-fluid, .container {
+  position: relative; }
+
+a {
+  color: #d93621;
+  text-decoration: none;
+  cursor: pointer; }
+  a:hover {
+    text-decoration: none;
+    color: #e35b4a; }
+
+.and-button {
+  line-height: 35px;
+  padding: 0 30px;
+  color: white;
+  background: #d93621;
+  border-radius: 3px;
+  font-size: 20px;
+  display: inline-block; }
+  .and-button:hover {
+    background: #e35b4a;
+    color: white; }
+
+h1, h2, h3, p {
+  margin: 0 0 10px; }
+
+p {
+  line-height: 35px;
+  margin-bottom: 15px; }
+
+.title {
+  font-family: 'nexa_lightregular', Helvetica, sans-serif;
+  text-align: center;
+  color: black;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold; }
+  .title:after {
+    content: "";
+    margin: auto;
+    display: block;
+    width: 40px;
+    background: #d93621;
+    height: 3px;
+    margin-top: 10px;
+    margin-bottom: 40px; }
+
+.subtitle {
+  font-family: 'nexa_lightregular', Helvetica, sans-serif;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 15px;
+  font-size: 20px; }
+
+.hero {
+  height: 800px;
+  background-image: url('img/Home-3.jpg');
+  background-size: cover;
+  background-position: left top; }
+  .hero .feature {
+    color: white;
+    font-size: 30px;
+    margin-top: 350px;
+    text-align: center; }
+  .hero .hero-title {
+    font-family: 'nexa_lightregular', Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    padding-top: 350px; }
+    .hero .hero-title:after {
+      content: "";
+      margin: auto;
+      display: block;
+      width: 70px;
+      background: #d93621;
+      height: 5px;
+      margin-top: 10px; }
+
+.sub-pages {
+  height: 70px;
+  line-height: 70px;
+  background: #fafafa;
+  text-align: center; }
+  .sub-pages .sub-page {
+    display: inline-block;
+    color: #8a8e99;
+    padding: 0 30px; }
+    .sub-pages .sub-page:hover, .sub-pages .sub-page.active {
+      color: #d93621; }
+
+.quote {
+  min-height: 350px;
+  padding: 50px 30px;
+  background-size: cover;
+  background-position: right;
+  background-color: white;
+  text-align: center; }
+  .quote .quote-center-text {
+    max-width: 850px;
+    margin: auto; }
+  .quote .quote-left-text {
+    text-align: left;
+    max-width: 850px;
+    margin: auto; }
+  .quote .quote-text {
+    margin-top: 60px;
+    padding: 50px; }
+  .quote .quote-benefit, .quote .quote-benefit-alt {
+    text-align: left; }
+    .quote .quote-benefit img, .quote .quote-benefit-alt img {
+      float: left;
+      width: 120px; }
+    .quote .quote-benefit p, .quote .quote-benefit-alt p, .quote .quote-benefit h3, .quote .quote-benefit-alt h3 {
+      padding-left: 160px; }
+    .quote .quote-benefit p, .quote .quote-benefit-alt p {
+      margin-bottom: 80px; }
+  .quote .quote-benefit-alt {
+    padding: 0 50px;
+    margin: auto; }
+    .quote .quote-benefit-alt img {
+      width: 140px;
+      margin-bottom: 100px; }
+    .quote .quote-benefit-alt p, .quote .quote-benefit-alt h3 {
+      padding-left: 190px; }
+
+.features .feature {
+  text-align: center;
+  padding-bottom: 30px;
+  margin: 0 1px; }
+  .features .feature img {
+    width: 100%;
+    margin-bottom: 40px; }
+    .features .feature img.slim {
+      height: 400px;
+      width: auto;
+      margin-left: auto;
+      margin-right: auto; }
+
+[data-component="header"] #header, [data-component="header"] #header-transparent {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 70px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: none;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2); }
+  [data-component="header"] #header .logo, [data-component="header"] #header-transparent .logo {
+    margin-top: 20px;
+    height: 40px;
+    position: absolute; }
+  [data-component="header"] #header .menu-button, [data-component="header"] #header-transparent .menu-button {
+    position: absolute;
+    right: 0;
+    color: #d93621;
+    font-size: 30px;
+    padding: 15px;
+    line-height: 40px;
+    cursor: pointer; }
+[data-component="header"] #header-transparent {
+  top: 0;
+  background: none;
+  display: block;
+  box-shadow: none; }
+  [data-component="header"] #header-transparent .menu-button {
+    color: white; }
+
+[data-component="what-we-do"] .services {
+  min-height: 500px; }
+  [data-component="what-we-do"] .services .quote-center-text {
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    display: none; }
+    [data-component="what-we-do"] .services .quote-center-text p {
+      max-width: 850px;
+      margin: auto; }
+[data-component="what-we-do"] .content-switcher table {
+  table-layout: fixed;
+  background: #fafafa;
+  width: 100%;
+  text-align: center; }
+  [data-component="what-we-do"] .content-switcher table tr td {
+    padding: 30px;
+    padding-bottom: 10px;
+    cursor: pointer; }
+    [data-component="what-we-do"] .content-switcher table tr td .title {
+      font-size: 20px;
+      color: #888; }
+      [data-component="what-we-do"] .content-switcher table tr td .title:after {
+        margin-bottom: 0;
+        background: none; }
+    [data-component="what-we-do"] .content-switcher table tr td.active {
+      background: #e8e9eb; }
+      [data-component="what-we-do"] .content-switcher table tr td.active .title {
+        color: #000000; }
+        [data-component="what-we-do"] .content-switcher table tr td.active .title:after {
+          background: #d93621; }
+[data-component="what-we-do"] .owl-item img {
+  position: relative;
+  margin-top: 50%;
+  transform: translateY(-50%); }
+
+[data-component="footer"] {
+  height: 250px;
+  background-color: #1b1e24;
+  text-align: center;
+  color: #8a8e99;
+  padding: 45px;
+  font-size: 15px; }
+  [data-component="footer"] i {
+    padding: 15px;
+    font-size: 30px;
+    color: white; }
+  [data-component="footer"] a {
+    color: inherit;
+    text-decoration: none; }
+    [data-component="footer"] a:hover {
+      color: white; }
