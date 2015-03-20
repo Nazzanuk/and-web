@@ -104,6 +104,18 @@ gulp.task('gen-theme', function () {
         .pipe(gulp.dest(dir.theme));
 });
 
+gulp.task('set-prod', function () {
+    return gulp.src(['wp-config-prod.php','wp-config-prod.php'])
+        .pipe(concat('wp-config.php'))
+        .pipe(gulp.dest(''));
+});
+
+gulp.task('set-local', function () {
+    return gulp.src(['wp-config-local.php'])
+        .pipe(concat('wp-config.php'))
+        .pipe(gulp.dest(''));
+});
+
 gulp.task('watch', ['default'], function () {
     gulp.watch([
         'app/components/**/*.*',
