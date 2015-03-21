@@ -4,7 +4,7 @@ FROM tutum/apache-php
 #ADD .apache2.conf /etc/apache2/
 RUN rm -fr /app
 ADD . /app
-RUN cp app/apache2.conf /etc/apache2/apache2.conf
+RUN cp /app/apache2.conf /etc/apache2/apache2.conf
 RUN a2enmod rewrite
 RUN a2enmod rewrite
 RUN sudo a2enmod rewrite
