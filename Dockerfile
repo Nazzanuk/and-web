@@ -1,6 +1,7 @@
 FROM tutum/apache-php
 
 COPY .apache2.conf /etc/apache2/
+ADD .apache2.conf /etc/apache2/
 RUN rm -fr /app
 RUN a2enmod rewrite
 RUN a2enmod rewrite
