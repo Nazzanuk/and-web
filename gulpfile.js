@@ -105,7 +105,7 @@ gulp.task('gen-theme', function () {
 });
 
 gulp.task('set-prod', function () {
-    return gulp.src(['wp-config-prod.php','wp-config-prod.php'])
+    return gulp.src(['wp-config-prod.php'])
         .pipe(concat('wp-config.php'))
         .pipe(gulp.dest(''));
 });
