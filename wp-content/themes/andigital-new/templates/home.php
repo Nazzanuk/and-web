@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <title>ANDigital</title>
 
+    <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <title><?php wp_title(); ?></title>
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+    <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
+
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/bower.css"/>
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/app.css"/>
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/fonts/stylesheet.css"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+
+    <?php wp_head(); ?>
 </head>
 <body ng-app="andigital">
 <div data-component="header" ng-controller="HeaderController">
@@ -136,5 +145,7 @@
 
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bower.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/app.js"></script>
+
+<?php wp_footer(); ?>
 </body>
 </html>
