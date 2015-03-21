@@ -70,6 +70,7 @@ $table_prefix  = 'wp_';
  */
 define('WP_DEBUG', false);
 define('RELOCATE',true);
+define('WP_DEBUG', true);
 
 
 define('WP_HOME','http://52.16.252.61');

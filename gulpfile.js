@@ -42,8 +42,8 @@ gulp.task('gen-css', function () {
         'app/app.scss'
     ])
         .pipe(sass())
-        .pipe(concat('style.css'))
-        .pipe(gulp.dest(dir.theme));
+        .pipe(concat('app.css'))
+        .pipe(gulp.dest(dir.theme + '/css'));
 
     return true;
 });
