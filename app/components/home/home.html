@@ -1,6 +1,6 @@
 <div data-component="home">
-    <? $image = wp_get_attachment_image_src(get_field('hero_image'), 'full'); ?>
-    <div class="hero" style="background-image: url('<? echo $image[0] ?>')">
+    <?php $image = wp_get_attachment_image_src(get_field('hero_image'), 'full'); ?>
+    <div class="hero" style="background-image: url('<?php echo $image[0] ?>')">
         <div class="container-fluid">
             <!--<div class="row">-->
             <div class="col-sm-6"></div>
