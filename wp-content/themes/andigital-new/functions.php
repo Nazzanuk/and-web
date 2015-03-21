@@ -1,4 +1,4 @@
-<?
+<?php
 
 include_once('lib/acf/acf.php');
 //define( 'ACF_LITE' , true );
