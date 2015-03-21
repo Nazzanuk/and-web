@@ -41,8 +41,8 @@
     </header>
 </div>
 <div data-component="what-we-do" ng-controller="WhatWeDoController">
-    <? $image = wp_get_attachment_image_src(get_field('header_image'), 'full'); ?>
-    <div class="hero" style="background-image: url('<? echo $image[0] ?>')">
+    <?php $image = wp_get_attachment_image_src(get_field('header_image'), 'full'); ?>
+    <div class="hero" style="background-image: url('<?php echo $image[0] ?>')">
         <h1 class="hero-title">What We Do</h1>
     </div>
 
