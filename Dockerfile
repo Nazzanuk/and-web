@@ -1,10 +1,10 @@
 FROM tutum/apache-php
 
-COPY .apache2.conf /etc/apache2/
-ADD .apache2.conf /etc/apache2/
+#COPY .apache2.conf /etc/apache2/
+#ADD .apache2.conf /etc/apache2/
 RUN rm -fr /app
 ADD . /app
-RUN cp -rf app/apache2.conf /etc/apache2/
+#RUN cp app/apache2.conf /etc/apache2/
 RUN a2enmod rewrite
 RUN a2enmod rewrite
 RUN sudo a2enmod rewrite
