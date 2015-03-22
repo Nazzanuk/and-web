@@ -53,7 +53,8 @@ gulp.task('gen-html', function () {
     var pages = [
         'home',
         'what-we-do',
-        'join-us'
+        'join-us',
+        'default'
     ];
 
     for (var i in pages) {
@@ -106,6 +107,12 @@ gulp.task('gen-theme', function () {
 
 gulp.task('set-prod', function () {
     return gulp.src(['wp-config-prod.php'])
+        .pipe(concat('wp-config.php'))
+        .pipe(gulp.dest(''));
+});
+
+gulp.task('set-dev', function () {
+    return gulp.src(['wp-config-dev.php'])
         .pipe(concat('wp-config.php'))
         .pipe(gulp.dest(''));
 });

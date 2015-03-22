@@ -22,7 +22,7 @@
 <div data-component="header" ng-controller="HeaderController">
     <header id="header-transparent">
         <div class="container-fluid">
-            <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-transparent.png" alt=""/>
+            <a href="/"><img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-transparent.png" alt="ANDigital"/></a>
 
             <div class="menu-button">
                 <i class="fa fa-bars"></i>
@@ -32,7 +32,7 @@
 
     <header id="header">
         <div class="container-fluid">
-            <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt=""/>
+            <a href="/"><img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="ANDigital"/></a>
 
             <div class="menu-button">
                 <i class="fa fa-bars"></i>
@@ -41,14 +41,14 @@
     </header>
 </div>
 <div data-component="what-we-do" ng-controller="JoinUsController">
-    <div class="hero"
-         style="background-image: url('http://andigital.com/wp-content/uploads/2014/09/Join-Us-Feature.jpg')">
+    <div class="hero">
+        <div class="hero parallax" style="background-image: url('http://andigital.com/wp-content/uploads/2014/09/Join-Us-Feature.jpg')"></div>
         <h1 class="hero-title">Join Us</h1>
     </div>
 
     <div class="sub-pages">
         <a class="sub-page active">Overview</a>
-        <a class="sub-page">Jobs</a>
+        <a href="/join-us/jobs" class="sub-page">Jobs</a>
     </div>
 
     <div class="quote">

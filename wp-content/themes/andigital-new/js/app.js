@@ -2,6 +2,77 @@ var app = angular.module('andigital', []);
 (function () {
     var app = angular.module('andigital');
 
+    app.controller('DefaultController', ['$scope', 'GlobalService', function ($scope, GlobalService) {
+        var activeService = 0;
+
+        var isActiveService = function (index) {
+            return activeService == index;
+        };
+
+        var setActiveService = function (index) {
+            if (activeService == index) return;
+
+            $('[data-service="' + activeService + '"]').velocity('transition.slideUpOut', 300);
+            $('[data-service="' + index + '"]').velocity('transition.slideDownIn', 300);
+
+            activeService = index;
+        };
+
+        var init = function () {
+            $('[data-service="' + activeService + '"]').velocity('transition.slideDownIn', 300);
+            $(".and-carousel").owlCarousel({
+                loop:true,
+                center:true,
+                items:1,
+                margin: 30,
+                //autoWidth: true,
+                dots:true,
+                autoplay:true,
+
+                responsive : {
+                    480 : {
+                        items: 2
+                    },
+                    700 : {
+                        items: 3
+                    },
+                    1000 : {
+                        items: 4
+                    }
+                }
+            });
+
+        };
+
+        init();
+
+        $scope.isActiveService = isActiveService;
+        $scope.setActiveService = setActiveService;
+
+    }]);
+})();
+(function () {
+    var app = angular.module('andigital');
+
+    app.service('GlobalService', [function () {
+
+        var parallax = function (){
+            var scrolled = $(window).scrollTop();
+
+            $('.parallax').each(function () {
+                var parentPosition = $(this).parent().position().top;
+                $(this).velocity({translateY: (((scrolled  - parentPosition) * 0.5)) + 'px'},{duration:0});
+            });
+        };
+
+        $(window).scroll(function(e){
+            parallax();
+        });
+    }]);
+})();
+(function () {
+    var app = angular.module('andigital');
+
     app.controller('HeaderController', ['$scope', function ($scope) {
         var header = 'transparent';
 
@@ -33,8 +104,15 @@ var app = angular.module('andigital', []);
 (function () {
     var app = angular.module('andigital');
 
-    app.controller('JoinUsController', ['$scope', function ($scope) {
-        var currentCareer = 0;
+    app.controller('HomeController', ['$scope', 'GlobalService', function ($scope, GlobalService) {
+
+    }]);
+})();
+(function () {
+    var app = angular.module('andigital');
+
+    app.controller('JoinUsController', ['$scope', 'GlobalService', function ($scope, GlobalService) {
+        var currentCareer = 1;
 
         var setCareer = function (index) {
             if (index == currentCareer) return;
@@ -48,6 +126,8 @@ var app = angular.module('andigital', []);
             return (index == currentCareer);
         };
 
+        setCareer(0);
+
         $scope.setCareer = setCareer;
         $scope.isCareer = isCareer;
     }]);
@@ -55,7 +135,7 @@ var app = angular.module('andigital', []);
 (function () {
     var app = angular.module('andigital');
 
-    app.controller('WhatWeDoController', ['$scope', function ($scope) {
+    app.controller('WhatWeDoController', ['$scope', 'GlobalService', function ($scope, GlobalService) {
         var activeService = 0;
 
         var isActiveService = function (index) {

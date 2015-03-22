@@ -1,7 +1,7 @@
 (function () {
     var app = angular.module('andigital');
 
-    app.controller('WhatWeDoController', ['$scope', 'GlobalService', function ($scope, GlobalService) {
+    app.controller('DefaultController', ['$scope', 'GlobalService', function ($scope, GlobalService) {
         var activeService = 0;
 
         var isActiveService = function (index) {
@@ -19,11 +19,11 @@
 
         var init = function () {
             $('[data-service="' + activeService + '"]').velocity('transition.slideDownIn', 300);
-            $("#clients-carousel").owlCarousel({
+            $(".and-carousel").owlCarousel({
                 loop:true,
                 center:true,
                 items:1,
-                margin: 100,
+                margin: 30,
                 //autoWidth: true,
                 dots:true,
                 autoplay:true,
@@ -33,21 +33,13 @@
                         items: 2
                     },
                     700 : {
+                        items: 3
+                    },
+                    1000 : {
                         items: 4
                     }
                 }
             });
-
-            $("#andacademy-video").owlCarousel({
-            //    video:true
-            //});
-            //
-            //$('.owl-carousel').owlCarousel({
-                items:1,
-                video:true,
-                lazyLoad:true,
-                dots:false
-            })
 
         };
 

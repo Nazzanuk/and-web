@@ -22,7 +22,7 @@
 <div data-component="header" ng-controller="HeaderController">
     <header id="header-transparent">
         <div class="container-fluid">
-            <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-transparent.png" alt=""/>
+            <a href="/"><img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-transparent.png" alt="ANDigital"/></a>
 
             <div class="menu-button">
                 <i class="fa fa-bars"></i>
@@ -32,7 +32,7 @@
 
     <header id="header">
         <div class="container-fluid">
-            <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt=""/>
+            <a href="/"><img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="ANDigital"/></a>
 
             <div class="menu-button">
                 <i class="fa fa-bars"></i>
@@ -40,11 +40,11 @@
         </div>
     </header>
 </div>
-<div data-component="home">
+<div data-component="home" ng-controller="HomeController">
     <?php $image = wp_get_attachment_image_src(get_field('hero_image'), 'full'); ?>
-    <div class="hero" style="background-image: url('<?php echo $image[0] ?>')">
+    <div class="hero">
+        <div class="hero parallax" style="background-image: url('<?php echo $image[0] ?>')"></div>
         <div class="container-fluid">
-            <!--<div class="row">-->
             <div class="col-sm-6"></div>
             <div class="col-sm-6">
                 <div class="feature">
@@ -55,7 +55,6 @@
                     <a href="/what-we-do" class="and-button">Find Out More</a>
                 </div>
             </div>
-            <!--</div>-->
 
         </div>
     </div>
@@ -65,7 +64,7 @@
 
         <div class="container-fluid">
             <div class="col-sm-4 col-md-5 col-lg-6"></div>
-            <div class="col-sm-8 col-md-7 col-lg-6">
+            <div class="col-md-7 col-lg-6">
                 <div class="quote-text">
                     <p>
                         <?php the_field('quote')?>
@@ -80,46 +79,38 @@
         <div class="container-fluid">
 
             <div class="row">
-
                 <?php while ( have_rows('features') ) : the_row(); ?>
-
                     <div class="col-sm-4">
                         <div class="feature">
                             <div class="row">
                                 <?php $image = wp_get_attachment_image_src(get_sub_field('image'), 'full'); ?>
-                                <img src="<?php echo $image[0] ?>" alt=""/>
+                                <a href="<?php the_sub_field('link_href') ?>">
+                                    <img src="<?php echo $image[0] ?>" alt=""/>
+                                </a>
                             </div>
 
                             <div class="title"><?php the_sub_field('title') ?></div>
                             <p><?php the_sub_field('text') ?></p>
-                            <br/>
 
                             <p class="visible-xs">
                                 <a href="<?php the_sub_field('link_href') ?>" class="and-button"><?php the_sub_field('link_title') ?></a>
+                                <br/>
                             </p>
                         </div>
                     </div>
                 <?php endwhile; ?>
-
             </div>
 
             <div class="row hidden-xs" style="text-align: center">
-                <div class="col-sm-4">
-                    <p>
-                        <a class="and-button">Learn More</a>
-                    </p>
-                </div>
-                <div class="col-sm-4">
-                    <p>
-                        <span class="and-button">Learn More</span>
-                    </p>
-                </div>
-                <div class="col-sm-4">
-                    <p>
-                        <span class="and-button">Learn More</span>
-                    </p>
-                    <br/><br/>
-                </div>
+                <?php while ( have_rows('features') ) : the_row(); ?>
+                    <div class="col-sm-4">
+                        <p>
+                            <a href="<?php the_sub_field('link_href') ?>" class="and-button"><?php the_sub_field('link_title') ?></a>
+                        </p>
+                        <br/>
+                        <br/>
+                    </div>
+                <?php endwhile; ?>
             </div>
 
         </div>
