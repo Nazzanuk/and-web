@@ -5,6 +5,7 @@ cd and-web
 git reset --hard origin/master
 git pull
 sudo npm install
+bower install
 gulp
 gulp set-dev
 sh build.sh
