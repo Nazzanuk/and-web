@@ -1,7 +1,7 @@
 <div data-component="home" ng-controller="HomeController">
     <?php $image = wp_get_attachment_image_src(get_field('hero_image'), 'full'); ?>
     <div class="hero">
-        <div class="hero parallax" style="background-image: url('<?php echo $image[0] ?>')"></div>
+        <div class="hero parallax" style="background-image: url('<?php echo $image[0] ?>');background-position: left;"></div>
         <div class="container-fluid">
             <div class="col-sm-6"></div>
             <div class="col-sm-6">
@@ -18,11 +18,12 @@
     </div>
 
     <?php $image = wp_get_attachment_image_src(get_field('quote_image'), 'full'); ?>
-    <div class="quote" style="background-image: url('<?php echo $image[0]; ?>')">
-
+    <div class="quote hidden-sm hidden-xs" style="background-image: url('<?php echo $image[0]; ?>')">
         <div class="container-fluid">
-            <div class="col-sm-4 col-md-5 col-lg-6"></div>
-            <div class="col-md-7 col-lg-6">
+            <div class="col-md-6">
+                <iframe src="https://player.vimeo.com/video/113017896?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+            <div class="col-md-6">
                 <div class="quote-text">
                     <p>
                         <?php the_field('quote')?>
@@ -32,6 +33,21 @@
 
         </div>
     </div>
+
+
+    <div class="quote visible-sm visible-xs" style="min-height: initial">
+        <div class="container-fluid">
+            <p>
+                <?php the_field('quote')?>
+            </p>
+        </div>
+    </div>
+
+    <div class='embed-container visible-xs visible-sm'>
+        <iframe src='http://player.vimeo.com/video/113017896?title=0&byline=0&portrait=0' frameborder='0' webkitAllowFullScreen mozallowfullscreen
+                allowFullScreen></iframe>
+    </div>
+
 
     <div class="features">
         <div class="container-fluid">

@@ -53,6 +53,7 @@ gulp.task('gen-html', function () {
     var pages = [
         'home',
         'what-we-do',
+        'who-we-are',
         'join-us',
         'default'
     ];
@@ -71,6 +72,10 @@ gulp.task('gen-html', function () {
             .pipe(insert.prepend("<?php /* Template Name: " + title + " */ ?>"))
             .pipe(gulp.dest(dir.theme + '/templates'));
     }
+
+    gulp.src('app/components/flex/flex.html')
+        .pipe(concat('flex.php'))
+        .pipe(gulp.dest(dir.theme + '/templates'));
 });
 
 gulp.task('gen-js', function () {

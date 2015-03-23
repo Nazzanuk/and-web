@@ -6,7 +6,7 @@
 
         $(window).scroll(function () {
             var offset = $(window).scrollTop();
-            if (offset > 700) {
+            if (offset > 400) {
                 setHeader('normal');
             } else {
                 setHeader('transparent');

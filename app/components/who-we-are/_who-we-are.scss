@@ -1,0 +1,60 @@
+[data-component="who-we-are"] {
+  .services {
+    min-height: 500px;
+    .quote-center-text {
+      position: absolute;
+      width: 100%;
+      max-width: 100%;
+      display: none;
+
+      p {
+        max-width: 850px;
+        margin: auto;
+      }
+    }
+  }
+
+  .content-switcher {
+    table {
+      table-layout: fixed;
+      background: $lightGrey;
+      width: 100%;
+      text-align: center;
+      tr {
+        td {
+          padding: 30px;
+          padding-bottom: 10px;
+          cursor: pointer;
+
+          .title {
+            font-size: 20px;
+            color: #888;
+
+            &:after {
+              margin-bottom: 0;
+              background: none;
+            }
+          }
+
+          &.active {
+            background: #e8e9eb;
+
+            .title {
+              color: #000000;
+
+              &:after {
+                background: $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .owl-item img {
+    position: relative;
+    margin-top: 50%;
+    transform: translateY(-50%);
+  }
+}

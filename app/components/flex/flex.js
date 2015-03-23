@@ -1,7 +1,7 @@
 (function () {
     var app = angular.module('andigital');
 
-    app.controller('DefaultController', ['$scope', 'GlobalService', function ($scope, GlobalService) {
+    app.controller('FlexController', ['$scope', 'GlobalService', function ($scope, GlobalService) {
         var activeService = 0;
 
         var isActiveService = function (index) {

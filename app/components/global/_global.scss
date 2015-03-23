@@ -3,7 +3,7 @@ body {
   color: #8a8e99;
 
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 16px;
+  font-size: 19px;
   overflow-x: hidden;
 }
 
@@ -17,7 +17,7 @@ a {
   text-decoration: none;
   cursor: pointer;
 
-  &:hover, &:active {
+  &:hover, &:active, &:focus {
     text-decoration: none;
     color: lighten($primary, 10%);
   }
@@ -245,4 +245,20 @@ p {
 
 .sub-pages {
 
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
