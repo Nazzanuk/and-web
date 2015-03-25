@@ -1,8 +1,9 @@
 body {
   color: #8a8e99;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 19px;
-  overflow-x: hidden; }
+  font-size: 16px;
+  overflow-x: hidden;
+  min-width: 320px; }
 
 .container-fluid, .container {
   position: relative; }
@@ -47,7 +48,7 @@ p {
   text-align: center;
   color: black;
   margin-bottom: 10px;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: bold; }
   .title:after {
     content: "";
@@ -58,13 +59,17 @@ p {
     height: 3px;
     margin-top: 10px;
     margin-bottom: 40px; }
+  .title.simple {
+    margin-bottom: 40px; }
+    .title.simple:after {
+      display: none; }
 
 .subtitle {
   font-family: 'nexa_lightregular', Helvetica, sans-serif;
   font-weight: bold;
   color: black;
   margin-bottom: 15px;
-  font-size: 20px; }
+  font-size: 17px; }
 
 .hero, .hero-small, .hero-mid {
   height: 700px;
@@ -252,6 +257,87 @@ p {
   position: relative;
   margin-top: 50%;
   transform: translateY(-50%); }
+
+[data-component="who-we-are"] .people {
+  padding: 2px; }
+  [data-component="who-we-are"] .people .person {
+    width: 20%;
+    padding-top: 20%;
+    background: red;
+    border: 2px solid white;
+    background-size: cover;
+    background-position: bottom center;
+    float: left;
+    position: relative;
+    cursor: pointer; }
+    [data-component="who-we-are"] .people .person .person-alt-image {
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: bottom center;
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      transition: all 0.3s linear; }
+    [data-component="who-we-are"] .people .person:hover .person-alt-image {
+      opacity: 1; }
+[data-component="who-we-are"] .profile {
+  background: white;
+  margin: 2px;
+  height: 800px;
+  position: relative;
+  float: left;
+  width: 100%; }
+  [data-component="who-we-are"] .profile .profile-image {
+    position: absolute;
+    top: 0;
+    right: 65%;
+    left: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center; }
+  [data-component="who-we-are"] .profile .profile-content {
+    background: #fafafa;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 35%;
+    bottom: 0;
+    padding: 15px 30px;
+    text-align: center;
+    overflow-y: auto; }
+  [data-component="who-we-are"] .profile .profile-close {
+    position: absolute;
+    font-size: 30px;
+    top: 0;
+    right: 0;
+    line-height: 50px;
+    width: 50px;
+    text-align: center;
+    color: #000000;
+    cursor: pointer; }
+@media (max-width: 768px) {
+  [data-component="who-we-are"] .people .person {
+    width: 25%;
+    padding-top: 25%; }
+  [data-component="who-we-are"] .people .profile .profile-image {
+    position: static;
+    height: 300px; }
+  [data-component="who-we-are"] .people .profile .profile-content {
+    position: relative;
+    top: initial;
+    right: initial;
+    left: initial;
+    bottom: initial;
+    height: 400px; } }
+@media (max-width: 500px) {
+  [data-component="who-we-are"] .people .person {
+    width: 50%;
+    padding-top: 50%; } }
 
 [data-component="footer"] {
   height: 250px;

@@ -75,8 +75,8 @@ define('WP_DEBUG_LOG', true);
 define('WP_DEBUG_DISPLAY', true);
 
 
-define('WP_HOME','http://localhost:9000');
-define('WP_SITEURL','http://localhost:9000');
+define('WP_HOME',"http://$_SERVER[HTTP_HOST]");
+define('WP_SITEURL',"http://$_SERVER[HTTP_HOST]");
 
 
 /* That's all, stop editing! Happy blogging. */

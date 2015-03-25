@@ -1,60 +1,120 @@
 [data-component="who-we-are"] {
-  .services {
-    min-height: 500px;
-    .quote-center-text {
-      position: absolute;
-      width: 100%;
-      max-width: 100%;
-      display: none;
+  .people {
+    padding: 2px;
 
-      p {
-        max-width: 850px;
-        margin: auto;
+    .person {
+      width: 20%;
+      padding-top: 20%;
+      background: red;
+      border: 2px solid white;
+      background-size: cover;
+      background-position: bottom center;
+      float: left;
+      position: relative;
+      cursor: pointer;
+
+      .person-alt-image {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: bottom center;
+        position: absolute;
+        top: 0;
+        opacity: 0;
+
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        transition: all 0.3s linear;
       }
-    }
-  }
 
-  .content-switcher {
-    table {
-      table-layout: fixed;
-      background: $lightGrey;
-      width: 100%;
-      text-align: center;
-      tr {
-        td {
-          padding: 30px;
-          padding-bottom: 10px;
-          cursor: pointer;
-
-          .title {
-            font-size: 20px;
-            color: #888;
-
-            &:after {
-              margin-bottom: 0;
-              background: none;
-            }
-          }
-
-          &.active {
-            background: #e8e9eb;
-
-            .title {
-              color: #000000;
-
-              &:after {
-                background: $primary;
-              }
-            }
-          }
+      &:hover {
+        .person-alt-image {
+          opacity: 1;
         }
       }
     }
   }
 
-  .owl-item img {
+  .profile {
+    background: white;
+    margin: 2px;
+    //    padding-top:75%;
+    height: 800px;
     position: relative;
-    margin-top: 50%;
-    transform: translateY(-50%);
+    float: left;
+    width: 100%;
+
+    .profile-image {
+      position: absolute;
+      top: 0;
+      right: 65%;
+      left: 0;
+      bottom: 0;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .profile-content {
+      background: $lightGrey;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 35%;
+      bottom: 0;
+      padding: 15px 30px;
+      text-align: center;
+      overflow-y: auto;
+    }
+
+    .profile-close {
+      position: absolute;
+      font-size: 30px;
+      top: 0;
+      right: 0;
+      line-height: 50px;
+      width: 50px;
+      text-align: center;
+      color: #000000;
+      cursor: pointer;
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    .people {
+      .person {
+        width: 25%;
+        padding-top: 25%;
+      }
+
+      .profile {
+        .profile-image {
+          position: static;
+          height: 300px;
+
+        }
+
+        .profile-content {
+          position: relative;
+          top: initial;
+          right: initial;
+          left: initial;
+          bottom: initial;
+          height: 400px;
+        }
+      }
+    }
+
+  }
+
+  @media (max-width: 500px) {
+    .people {
+      .person {
+        width: 50%;
+        padding-top: 50%;
+      }
+    }
   }
 }

@@ -3,8 +3,9 @@ body {
   color: #8a8e99;
 
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 19px;
+  font-size: 16px;
   overflow-x: hidden;
+  min-width: 320px;
 }
 
 .container-fluid, .container {
@@ -62,7 +63,7 @@ p {
   text-align: center;
   color: black;
   margin-bottom: 10px;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: bold;
 
   &:after {
@@ -75,6 +76,16 @@ p {
     margin-top: 10px;
     margin-bottom: 40px;
   }
+
+  &.simple {
+
+    margin-bottom: 40px;
+
+    &:after {
+      display: none;
+    }
+
+  }
 }
 
 .subtitle {
@@ -82,7 +93,7 @@ p {
   font-weight: bold;
   color: black;
   margin-bottom: 15px;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .hero {

@@ -1,10 +1,57 @@
 <div data-component="who-we-are" ng-controller="WhoWeAreController">
-    <?php if( have_rows('layout-1') ): while ( have_rows('layout') ) : the_row(); ?>
+    <?php if( have_rows('layout') ): while ( have_rows('layout') ) : the_row(); ?>
         <?php require('flex.php') ?>
     <?php endwhile; else : endif; ?>
 
+    <div class="people">
+        <div class="clearfix">
+            <?php $post_objects = get_field('people'); $index = 0; ?>
+            <?php if( $post_objects ): foreach( $post_objects as $post): setup_postdata($post); ?>
+                <?php $image = wp_get_attachment_image_src(get_field('image_1'), 'full'); ?>
+                <?php $image2 = wp_get_attachment_image_src(get_field('image_2'), 'full'); ?>
+                <?php $image3 = wp_get_attachment_image_src(get_field('image_3'), 'full'); ?>
+                <div class="person" data-person="<?php echo $index ?>" ng-click="selectPerson(<?php echo $index ?>)" style="background-image: url('<?php echo $image[0] ?>')">
+                    <div class="person-alt-image" style="background-image: url('<?php echo $image2[0] ?>')">
 
+                    </div>
 
+                    <div style="display: none">
+                        <div class="firstName"><?php the_field('first_name')?></div>
+                        <div class="lastName"><?php the_field('last_name')?></div>
+                        <div class="jobTitle"><?php the_field('job_title')?></div>
+                        <div class="andTitle"><?php the_field('and_title')?></div>
+                        <div class="careerBackground"><?php the_field('career_background')?></div>
+                        <?php if (get_field('role')) {?>
+                            <div class="role"><?php the_field('role')?></div>
+                        <?php } ?>
+                        <div class="superheroPower"><?php the_field('superhero_power')?></div>
+                        <div class="image"><?php echo $image3[0] ?></div>
+                    </div>
+                </div>
+                <?php $index++ ?>
+            <?php endforeach; wp_reset_postdata(); endif; ?>
+        </div>
+
+        <div class="profile-template" style="display: none">
+            <div class="profile-image" style="background-position:center">
+
+            </div>
+            <div class="profile-content">
+                <div class="profile-close"><i class="fa fa-times"></i></div>
+                <div class="title profile-name"></div>
+                <div class="title simple profile-job"><small></small></div>
+                <div class="subtitle">Career Background</div>
+                <p class="profile-career-background"></p>
+                <br/>
+                <div class="subtitle">Role</div>
+                <p class="profile-role"></p>
+                <br/>
+                <div class="subtitle">Superhero Power</div>
+                <p class="profile-superhero-power"></p>
+            </div>
+        </div>
+
+    </div>
 
 
     <?php if( have_rows('layout-2') ): while ( have_rows('layout') ) : the_row(); ?>

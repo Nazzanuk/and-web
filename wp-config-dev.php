@@ -73,9 +73,8 @@ define('RELOCATE',true);
 define('WP_DEBUG', true);
 define('WP_DEBUG_LOG', true);
 
-
-define('WP_HOME','http://52.16.53.51');
-define('WP_SITEURL','http://52.16.53.51');
+define('WP_HOME',"http://$_SERVER[HTTP_HOST]");
+define('WP_SITEURL',"http://$_SERVER[HTTP_HOST]");
 
 
 /* That's all, stop editing! Happy blogging. */
