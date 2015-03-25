@@ -2,6 +2,7 @@
 
 ssh -t -i deployment/andigital-website.pem ec2-user@52.16.53.51 bash -c "'
 cd and-web
+git fetch
 git reset --hard origin/master
 git pull
 sudo npm install
