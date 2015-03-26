@@ -42,6 +42,24 @@
         </div>
     </header>
 </div>
+<div data-component="menu" ng-controller="MenuController">
+    <nav id="menu" style="display:none;">
+        <div class="logo">
+            <i class="fa-times fa pull-right" ng-click="hideMenu()"></i>
+            <a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-transparent.png" alt="ANDigital"/></a>
+
+        </div>
+
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/who-we-are">Who We Are</a></li>
+            <li><a href="/what-we-do">What We Do</a></li>
+            <li><a href="/join-us">Join Us</a></li>
+            <li><a href="/jobs">Jobs</a></li>
+        </ul>
+
+    </nav>
+</div>
 <div data-component="what-we-do" ng-controller="JoinUsController">
     <div class="hero">
         <div class="hero parallax" style="background-image: url('http://andigital.com/wp-content/uploads/2014/09/Join-Us-Feature.jpg')"></div>

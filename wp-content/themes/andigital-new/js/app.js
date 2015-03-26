@@ -75,19 +75,12 @@ var app = angular.module('andigital', []);
 (function () {
     var app = angular.module('andigital');
 
-    app.controller('HomeController', ['$scope', 'GlobalService', function ($scope, GlobalService) {
-
-    }]);
-})();
-(function () {
-    var app = angular.module('andigital');
-
     app.controller('HeaderController', ['$scope', function ($scope) {
         var header = 'transparent';
 
         $(window).scroll(function () {
             var offset = $(window).scrollTop();
-            if (offset > 400) {
+            if (offset > 100) {
                 setHeader('normal');
             } else {
                 setHeader('transparent');
@@ -113,6 +106,13 @@ var app = angular.module('andigital', []);
 (function () {
     var app = angular.module('andigital');
 
+    app.controller('HomeController', ['$scope', 'GlobalService', function ($scope, GlobalService) {
+
+    }]);
+})();
+(function () {
+    var app = angular.module('andigital');
+
     app.controller('JoinUsController', ['$scope', 'GlobalService', function ($scope, GlobalService) {
         var currentCareer = 1;
 
@@ -132,6 +132,29 @@ var app = angular.module('andigital', []);
 
         $scope.setCareer = setCareer;
         $scope.isCareer = isCareer;
+    }]);
+})();
+(function () {
+    var app = angular.module('andigital');
+
+    app.controller('MenuController', ['$scope', function ($scope) {
+        var showMenu = function () {
+            $('nav#menu').velocity('stop');
+            $('nav#menu').velocity('transition.slideRightIn', 250);
+            $('nav#menu li').hide().velocity('transition.slideLeftIn', {duration:250, stagger: 150});
+        };
+
+        $('.menu-button').click(function () {
+            showMenu();
+        });
+
+        var hideMenu = function () {
+            $('nav#menu').velocity('stop');
+            $('nav#menu').velocity('transition.slideRightOut', 250);
+        };
+
+        $scope.hideMenu = hideMenu;
+
     }]);
 })();
 (function () {

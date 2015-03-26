@@ -65,6 +65,7 @@ gulp.task('gen-html', function () {
         gulp.src([
             'app/components/head/head.html',
             'app/components/header/header.html',
+            'app/components/menu/menu.html',
             'app/components/' + page + '/' + page + '.html',
             'app/components/footer/footer.html'
         ])

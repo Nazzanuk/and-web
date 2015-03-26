@@ -223,7 +223,8 @@ p {
     color: white; }
 
 [data-component="what-we-do"] .services {
-  min-height: 500px; }
+  min-height: 500px;
+  overflow-y: auto; }
   [data-component="what-we-do"] .services .quote-center-text {
     position: absolute;
     width: 100%;
@@ -370,3 +371,37 @@ p {
     text-decoration: none; }
     [data-component="footer"] a:hover {
       color: white; }
+
+[data-component="menu"] #menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  z-index: 101;
+  width: 300px;
+  border-right: 3px solid #d93621; }
+  [data-component="menu"] #menu .logo {
+    background: #d93621;
+    padding: 25px 15px 10px;
+    color: white;
+    height: 70px; }
+    [data-component="menu"] #menu .logo img {
+      height: 30px; }
+    [data-component="menu"] #menu .logo a {
+      display: inline-block; }
+  [data-component="menu"] #menu ul, [data-component="menu"] #menu li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: none; }
+  [data-component="menu"] #menu ul li a {
+    line-height: 40px;
+    padding: 0 15px;
+    border-bottom: 1px solid #fff;
+    display: block;
+    color: #333; }
+    [data-component="menu"] #menu ul li a:hover {
+      background: #fff;
+      color: #d93621; }
