@@ -1,6 +1,7 @@
 [data-component="what-we-do"] {
   .services {
     min-height: 500px;
+    overflow-y:auto;
     .quote-center-text {
       position: absolute;
       width: 100%;
