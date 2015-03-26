@@ -199,7 +199,7 @@
             </p>
 
             <p style="text-align: center">
-                <a class="and-button">Find Out More</a>
+                <a href="http://graduates.andigital.com/" class="and-button">Find Out More</a>
             </p>
         </div>
 
@@ -224,7 +224,7 @@
             </p>
 
             <p style="text-align: center">
-                <a class="and-button">Find Out More</a>
+                <a href="/join-us/jobs/" class="and-button">Find Out More</a>
             </p>
         </div>
     </div>
