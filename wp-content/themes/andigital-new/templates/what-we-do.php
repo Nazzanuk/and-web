@@ -123,7 +123,7 @@
                         <div class="col-sm-4">
                             <div class="feature">
 
-                                <div class="title"><?php the_sub_field('name') ?></div>
+                                <div class="title"><small><?php the_sub_field('name') ?></small></div>
                                 <div class="row">
                                     <?php $image = wp_get_attachment_image_src(get_sub_field('image'), 'full'); ?>
                                     <a href="<?php the_sub_field('link') ?>">
@@ -134,7 +134,7 @@
                                 <br/>
 
                                 <p class="visible-xs">
-                                    <a class="and-button" href="<?php the_sub_field('link') ?>">Learn More</a>
+                                    <a class="and-button" href="<?php the_sub_field('link') ?>">Read More</a>
                                 </p>
                             </div>
                         </div>
@@ -146,7 +146,7 @@
                     <?php while ( have_rows('products') ) : the_row(); ?>
                         <div class="col-sm-4">
                             <p>
-                                <a class="and-button" href="<?php the_sub_field('link') ?>">Learn More</a>
+                                <a class="and-button" href="<?php the_sub_field('link') ?>">Read More</a>
                             </p>
                         </div>
                     <?php endwhile; ?>
@@ -158,7 +158,7 @@
 
     </div>
 
-    <div class="quote">
+    <div class="quote" id="academy">
         <div class="title">ANDacademy</div>
 
         <div class="container" style="text-align: left">
