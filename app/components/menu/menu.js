@@ -5,7 +5,7 @@
         var showMenu = function () {
             $('nav#menu').velocity('stop');
             $('nav#menu').velocity('transition.slideRightIn', 250);
-            $('nav#menu li').hide().velocity('transition.slideLeftIn', {duration:250, stagger: 150});
+            $('nav#menu li').hide().velocity('transition.slideRightIn', {duration:250, stagger: 150});
         };
 
         $('.menu-button').click(function () {
