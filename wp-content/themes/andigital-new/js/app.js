@@ -75,6 +75,13 @@ var app = angular.module('andigital', []);
 (function () {
     var app = angular.module('andigital');
 
+    app.controller('HomeController', ['$scope', 'GlobalService', function ($scope, GlobalService) {
+
+    }]);
+})();
+(function () {
+    var app = angular.module('andigital');
+
     app.controller('HeaderController', ['$scope', function ($scope) {
         var header = 'transparent';
 
@@ -101,13 +108,6 @@ var app = angular.module('andigital', []);
                 $('#header-transparent').velocity('transition.slideUpOut', 300);
             }
         }
-    }]);
-})();
-(function () {
-    var app = angular.module('andigital');
-
-    app.controller('HomeController', ['$scope', 'GlobalService', function ($scope, GlobalService) {
-
     }]);
 })();
 (function () {

@@ -257,6 +257,21 @@ p {
   position: relative;
   margin-top: 50%;
   transform: translateY(-50%); }
+[data-component="what-we-do"] .academy-banner {
+  height: 400px;
+  position: relative; }
+  [data-component="what-we-do"] .academy-banner .academy-background {
+    background-image: url('http://andigital.com/wp-content/uploads/2014/09/academy-1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    [data-component="what-we-do"] .academy-banner .academy-background .title {
+      color: white;
+      padding-top: 180px; }
 
 [data-component="who-we-are"] .people {
   padding: 2px; }

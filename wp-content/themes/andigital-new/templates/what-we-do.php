@@ -158,9 +158,13 @@
 
     </div>
 
-    <div class="quote" id="academy">
-        <div class="title">ANDacademy</div>
+    <div class="academy-banner" id="academy">
+        <div class="academy-background">
+            <div class="title">ANDacademy</div>
+        </div>
+    </div>
 
+    <div class="quote">
         <div class="container" style="text-align: left">
             <p><?php the_field('andacademy_text') ?>
             </p>
